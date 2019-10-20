@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Сделанное тестовое задание</title>
+<style>
+.hide {
+    display: none; 
+}
+.hide + label ~ div{
+    display: none;
+}
+/* оформляем текст label */
+.hide + label {
+    padding: 0;
+    cursor: pointer;
+    display: inline-block; 
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: DarkRed;
+    border-bottom: 0;
+}
+.hide:checked + label + div {
+    width: 100%;
+    display: block; 
+    box-shadow: inset 0 1px 5px rgba(0,0,0,0.2);
+    padding: 5px;
+}
+
+body{
+background: #FFDEAD;
+}
+.container{
+width: 100%;
+max-width: 1024px;
+padding: 0 15px;
+margin: 0 auto;
+}
+div{
+margin: 0 1% 0 1%;
+}
+.row{
+float: left;
+width: 90%;
+}
+.col-1-2{
+width: 45%;
+float: left;
+}
+.col-1-3{
+width: 36%;
+float: left;
+}
+.tel, .name{
+margin: 1% 2% 1% 4%;
+width: 10%;
+float: left;
+text-align: right;
+}
+.telForm, .nameForm{
+width: 30%;
+float: left;
+}
+.col-2-3{
+margin: 1%;
+width: 60%;
+float: left;
+}
+table{
+margin: 0 5% 0 5%;
+width: 90%;
+border-collapse:collapse;
+}
+.first{
+width: 13%;
+}
+.first1{
+width: 32%;
+}
+.textField{
+width: 100%;
+padding: 5px;
+box-sizing: border-box;
+box-shadow: inset 0 1px 5px rgba(0,0,0,0.2);
+border: 1px solid #ccc;
+color: #A9A9A9;
+}
+table{
+text-align: center;
+}
+h1, h2{
+font-family: 'Monotype Corsiva';
+}
+p, th,td{
+font-family: 'Courier';
+}
+</style>
+</head>
+
+<body>
+<div class="main">
+<div class="container">
+<div class="row">	
+<div class="col-1-2">
+<p style="text-align: right;"><img src="images/1.jpg" height=200px></p>
+</div>
+<div class="col-1-2">
+<h1>Николай Мишин</h1>
+<p><b>Адрес:</b> Челябинск<br><b>Опыт работы:</b> Нет<br><b>Телефон:</b> +79193242677</p>	
+</div>
+</div>
+
+<div class="row" >	
+<div>	
+<h2><b>Знание языков:</b></h2>	
+</div>	
+<table border="2">
+<tr>
+<th class="first1"></th>
+<th class="first">JavaScript</th><th class="first">Python</th><th class="first">Java</th><th class="first">C#</th><th class="first">C++</th>
+</tr>
+<tr><th>Отличное владение</th>
+<td>нет</td><td>нет</td><td>нет</td><td>Да</td><td>нет</td>
+</tr>
+<tr><th>Хорошее владение</th>
+<td>нет</td><td>нет</td><td>Да</td><td>Да</td><td>нет</td>
+</tr>
+<tr><th>Среднее владение</th>
+<td>нет</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td>
+</tr>
+<tr><th>Плохое владение</th>
+<td>Да</td><td>Да</td><td>Да</td><td>нет</td><td>Да</td>
+</tr>
+</table>
+</div>
+
+<div class = "row">
+<div float="center">
+<form>
+<div class="tel">
+<p><b>Телефон:</p>	
+</div>
+<div class="telForm">
+<p><input type="tel" placeholder="+79193242677" class="textField" pattern="+7[0-9]{10}"></p>
+</div>
+</form>
+<form>
+<div class="name">
+<p><b>Имя:</p>	
+</div>
+<div class="nameForm">
+<p><input maxlength="25" placeholder="Николай" class="textField" type="Name"></p>
+</div>
+</div>
+</form>
+</div>
+
+<div class = "row">
+    <input type="checkbox" id="hd-1" class="hide"/>
+    <label for="hd-1" ><h2>Нажмите здесь, чтобы узнать меня получше</h2></label>
+    <div>
+    <p>Зовут меня Николай, мне 18 лет. Живу я в Челябинске, учусь в Челябинском Радиотехническом техникуме.</p>    
+<p>Знаю язык C# изучали в техникуме, также изучал самостоятельно Java,  Python и C++, эти языки программирования и еще парачку могу различить по их коду. Писал игры. Так же начал углубляться в создание сайтов. Больше всего хочу углубиться в Бекэнд сайта (в серверную часть), PHP, JS...</p>      
+<p style="text-align: center;">На этом все.</p>    
+</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
